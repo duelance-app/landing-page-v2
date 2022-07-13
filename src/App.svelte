@@ -7,7 +7,6 @@
  * permission of Shreyans Jain and Naman Bansal.
  * Proprietary and confidential
  *******************************************************************************************************************/ -->
-
 <script lang="ts">
 </script>
 
@@ -68,7 +67,12 @@
                 />
             </div>
             <div class="text-center">
-                <button type="submit" id="submit-button-form-top" class="px-5 py-2.5 text-white rounded-full text-2xl font-Raleway font-semibold focus:outline-white hover:shadow-lg">Join The Waitlist</button>
+                <button
+                    type="submit"
+                    id="submit-button-form-top"
+                    class="px-5 py-2.5 text-white rounded-full text-2xl font-Raleway font-semibold focus:outline-white hover:shadow-lg"
+                    >Join The Waitlist</button
+                >
             </div>
         </form>
     </div>
