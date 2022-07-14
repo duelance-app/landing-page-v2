@@ -25,7 +25,9 @@
         <div
             class="flex flex-col my-7 space-y-2 items-center justify-end px-4 pt-5 mt-10"
         >
-            <p class="text-5xl text-center font-Raleway font-bold md:text-6xl">
+            <p
+                class="text-5xl text-center font-Raleway font-bold md:text-6xl lg:text-7xl"
+            >
                 Tools to Grow Your
             </p>
             <p
