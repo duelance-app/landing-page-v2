@@ -8,6 +8,33 @@
  * Proprietary and confidential
  *******************************************************************************************************************/ -->
 <script lang="ts">
+    async function sendWaitlistData() {
+        const name_input = document.getElementById("name") as HTMLInputElement;
+        const name_arr = name_input.value.split(" ");
+        var first_name = name_arr[0];
+        for (let i = 0; i < name_arr.length - 2; i++) {
+            first_name = first_name.concat(" ", name_arr[i + 1]);
+        }
+        const email = document.getElementById("email") as HTMLInputElement;
+        const response = await fetch(
+            `https://${window.location.hostname}/addWaitlist`,
+            {
+                method: "POST",
+                body: JSON.stringify({
+                    email: email.value,
+                    first_name: first_name,
+                    last_name: name_arr[name_arr.length - 1],
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error("Please enter valid email address and name.");
+        }
+    }
 </script>
 
 <main>
@@ -45,7 +72,7 @@
             </p>
         </div>
         <div class="w-full mb-32 mt-2 px-4 md:w-4/5 md:mx-auto lg:w-1/2">
-            <form>
+            <form on:submit|preventDefault={sendWaitlistData}>
                 <div class="mb-6">
                     <input
                         type="text"
@@ -268,7 +295,7 @@
                 <div
                     class="space-y-9 mt-10 w-full md:w-4/5 md:mx-auto lg:w-full"
                 >
-                    <form>
+                    <form on:submit|preventDefault={sendWaitlistData}>
                         <div class="mb-6">
                             <input
                                 type="text"
