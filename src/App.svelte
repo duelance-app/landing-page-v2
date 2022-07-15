@@ -65,10 +65,12 @@
             </p>
             <p class="text-2xl text-center font-medium py-2">
                 <strong>Duelance </strong>has
-                <strong> all the tools you need </strong>
+                <strong> all the tools you need </strong> to grow your
+                freelancing business <strong>by 100%</strong>
                 - project management, accounting, <br /> invoicing, time
                 tracking,
-                <strong> and more. </strong>
+                <strong> and more. </strong> The future of managing your business
+                at your doorsteps.
             </p>
         </div>
         <div class="w-full mb-32 mt-2 px-4 md:w-4/5 md:mx-auto lg:w-1/2">
