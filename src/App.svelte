@@ -87,7 +87,11 @@
                 <div
                     class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
                 >
-                    <img src="" alt="" />
+                    <img
+                        src="images/proj-manage-icon.png"
+                        alt=""
+                        class="w-1/4 md:w-16"
+                    />
                     <h3
                         class="text-white font-Raleway font-semibold text-4xl mb-2"
                     >
@@ -102,7 +106,11 @@
                 <div
                     class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
                 >
-                    <img src="" alt="" />
+                    <img
+                        src="images/accounting-icon.png"
+                        alt=""
+                        class="w-1/4 md:w-16"
+                    />
                     <h3
                         class="text-white font-Raleway font-semibold text-4xl mb-2"
                     >
@@ -121,7 +129,11 @@
                 <div
                     class="flex flex-col bg-gray-900 p-7 mx-2 rounded-3xl mb-4 lg:justify-evenly lg:mb-0"
                 >
-                    <img src="" alt="" />
+                    <img
+                        src="images/time-icon.png"
+                        alt=""
+                        class="w-1/4 md:w-16"
+                    />
                     <h3
                         class="text-white font-Raleway font-semibold text-4xl mb-2"
                     >
@@ -135,7 +147,11 @@
                 <div
                     class="flex flex-col bg-gray-900 p-7 mx-2 rounded-3xl lg:justify-evenly"
                 >
-                    <img src="" alt="" />
+                    <img
+                        src="images/tax-icon.png"
+                        alt=""
+                        class="w-1/4 md:w-16"
+                    />
                     <h3
                         class="text-white font-Raleway font-semibold text-4xl mb-2"
                     >
