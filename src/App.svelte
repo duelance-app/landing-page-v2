@@ -248,12 +248,12 @@
                     class="flex flex-col md:items-center md:text-center lg:text-left lg:items-start"
                 >
                     <h2
-                        class="font-WorkSans font-semibold text-6xl text-white pb-2"
+                        class="font-WorkSans font-medium text-5xl text-white pb-2"
                     >
                         Join The Waitlist Now
                     </h2>
                     <p
-                        class="font-Worksans font-semibold text-3xl text-gray-300 pb-4"
+                        class="font-Worksans font-medium text-3xl text-gray-300 pb-4"
                     >
                         Be The First To Get To Know About Our Launch
                     </p>
