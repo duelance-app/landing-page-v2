@@ -332,17 +332,19 @@
                 <p
                     class="font-WorkSans font-semibold text-2xl text-gray-300 md:text-xl"
                 >
-                    © 2022 Duelance Inc.
+                    &copy; 2022 Shreyans Jain & <br /> &emsp; &emsp; &emsp; &emsp;
+                    &emsp; &#8239; &#8239; Naman Bansal
                 </p>
-                <p class="font-WorkSans font-semibold text-5xl text-white">
+                <p
+                    class="font-WorkSans font-semibold text-5xl text-white text-center vertical-middle"
+                >
                     Duelance
                 </p>
                 <p
                     class="font-WorkSans font-semibold text-2xl text-gray-300 md:text-xl"
                 >
-                    Icons Credit: <a href="https://icons8.com" class=""
-                        >icons8.com</a
-                    >
+                    Designed & built by us.<br />
+                    <a href="https://icons8.com" class="">Icons by Icons8.</a>
                 </p>
             </div>
         </div>
