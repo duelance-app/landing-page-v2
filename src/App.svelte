@@ -10,40 +10,45 @@
 <script lang="ts">
     import { fly, fade } from "svelte/transition";
     import { onMount } from "svelte";
-    import { inview } from "svelte-inview";
-
+    let message = "";
     async function sendWaitlistData() {
-        const name_input = document.getElementById("name") as HTMLInputElement;
-        const name_arr = name_input.value.split(" ");
-        var first_name = name_arr[0];
-        for (let i = 0; i < name_arr.length - 2; i++) {
-            first_name = first_name.concat(" ", name_arr[i + 1]);
-        }
-        const email = document.getElementById("email") as HTMLInputElement;
-        const response = await fetch(
-            `https://${window.location.hostname}/addWaitlist`,
-            {
-                method: "POST",
-                body: JSON.stringify({
-                    email: email.value,
-                    first_name: first_name,
-                    last_name: name_arr[name_arr.length - 1],
-                }),
-                headers: {
-                    "Content-Type": "application/json",
-                },
+        try {
+            const name_input = document.getElementById(
+                "name"
+            ) as HTMLInputElement;
+            const name_arr = name_input.value.split(" ");
+            var first_name = name_arr[0];
+            for (let i = 0; i < name_arr.length - 2; i++) {
+                first_name = first_name.concat(" ", name_arr[i + 1]);
             }
-        );
-
-        if (!response.ok) {
-            throw new Error("Please enter valid email address and name.");
+            const email = document.getElementById("email") as HTMLInputElement;
+            const response = await fetch(
+                `https://${window.location.hostname}/addWaitlist`,
+                {
+                    method: "POST",
+                    body: JSON.stringify({
+                        email: email.value,
+                        first_name: first_name,
+                        last_name: name_arr[name_arr.length - 1],
+                    }),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
+            if (!response.ok) {
+                throw new Error("Please enter valid email address and name.");
+            } else {
+                message = "You've been successfully added to the waitlist!";
+            }
+        } catch (err) {
+            message = err;
         }
     }
     let animate = false;
     onMount(() => {
         animate = true;
     });
-    let isInView;
 </script>
 
 <main>
@@ -115,6 +120,9 @@
                                 >Join The Waitlist</button
                             >
                         </div>
+                        <p class="text-center text-black font-WorkSans text-xl">
+                            {message}
+                        </p>
                     </form>
                 </div>
             {/if}
@@ -130,53 +138,46 @@
             </p>
             <div
                 class="flex flex-row flex-wrap px-5 py-2 justify-evenly mt-5 lg:flex-nowrap"
-                use:inview={{ unobserveOnEnter: true, rootMargin: "-20%" }}
-                on:change={({ detail }) => {
-                    isInView = detail.inView;
-                }}
             >
-                {#if isInView}
-                    <div
-                        class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
-                        in:fly={{ x: -2000, duration: 1000 }}
+                <div
+                    class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
+                    in:fly={{ x: -2000, duration: 1000 }}
+                >
+                    <img
+                        src="images/proj-manage-icon.png"
+                        alt=""
+                        class="w-1/4 md:w-16"
+                    />
+                    <h3
+                        class="text-white font-Raleway font-semibold text-4xl mb-2"
                     >
-                        <img
-                            src="images/proj-manage-icon.png"
-                            alt=""
-                            class="w-1/4 md:w-16"
-                        />
-                        <h3
-                            class="text-white font-Raleway font-semibold text-4xl mb-2"
-                        >
-                            Project Management
-                        </h3>
-                        <p class="text-white font-Raleway font-medium text-2xl">
-                            Stop forgetting projects and due dates. Start
-                            impressing clients and get organized with powerful
-                            project management that doesn't overwhelm you.
-                        </p>
-                    </div>
-                    <div
-                        class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
+                        Project Management
+                    </h3>
+                    <p class="text-white font-Raleway font-medium text-2xl">
+                        Stop forgetting projects and due dates. Start impressing
+                        clients and get organized with powerful project
+                        management that doesn't overwhelm you.
+                    </p>
+                </div>
+                <div
+                    class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
+                >
+                    <img
+                        src="images/accounting-icon.png"
+                        alt=""
+                        class="w-1/4 md:w-16"
+                    />
+                    <h3
+                        class="text-white font-Raleway font-semibold text-4xl mb-2"
                     >
-                        <img
-                            src="images/accounting-icon.png"
-                            alt=""
-                            class="w-1/4 md:w-16"
-                        />
-                        <h3
-                            class="text-white font-Raleway font-semibold text-4xl mb-2"
-                        >
-                            Accounting & Invoicing
-                        </h3>
-                        <p class="text-white font-Raleway font-medium text-2xl">
-                            Finally, accounting that doesn't require you to be a
-                            CPA. Sending invoices, receiving payments,
-                            maintaining clean books, and filing taxes shouldn't
-                            be hectic!
-                        </p>
-                    </div>
-                {/if}
+                        Accounting & Invoicing
+                    </h3>
+                    <p class="text-white font-Raleway font-medium text-2xl">
+                        Finally, accounting that doesn't require you to be a
+                        CPA. Sending invoices, receiving payments, maintaining
+                        clean books, and filing taxes shouldn't be hectic!
+                    </p>
+                </div>
             </div>
             <div
                 class="flex flex-row flex-wrap px-5 py-2 justify-evenly mb-5 lg:flex-nowrap"
