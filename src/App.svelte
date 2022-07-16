@@ -63,7 +63,7 @@
             >
                 Freelance Business Management.
             </p>
-            <p class="text-2xl text-center font-medium py-2">
+            <p class="text-2xl text-center font-medium py-2 lg:w-3/4">
                 Duelance combines all the important aspects of your freelancing
                 business into one intuitive app at a fraction of the cost. Spend
                 more time on your passion, we've got your management covered!
