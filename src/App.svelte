@@ -75,7 +75,7 @@
                     <input
                         type="text"
                         id="name"
-                        class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="John Doe"
                     />
                 </div>
@@ -83,7 +83,7 @@
                     <input
                         type="email"
                         id="email"
-                        class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="johnd@example.com"
                     />
                 </div>
@@ -334,13 +334,13 @@
                 class="flex flex-row flex-wrap justify-between items-center md:flex-nowrap"
             >
                 <p
-                    class="font-WorkSans font-semibold text-2xl text-gray-300 md:text-xl"
+                    class="font-WorkSans font-semibold text-2xl text-gray-300 pb-3 md:text-xl"
                 >
-                    &copy; 2022 Shreyans Jain & <br /> &emsp; &emsp; &emsp; &emsp;
-                    &emsp; &#8239; &#8239; Naman Bansal
+                    &copy; 2022 Naman Bansal & <br />
+                    Shreyans Jain
                 </p>
                 <p
-                    class="font-WorkSans font-semibold text-5xl text-white text-center vertical-middle"
+                    class="font-WorkSans font-semibold text-5xl text-white text-center vertical-middle pb-3"
                 >
                     Duelance
                 </p>
