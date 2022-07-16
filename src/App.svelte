@@ -55,22 +55,18 @@
             <p
                 class="text-5xl text-center font-Raleway font-bold md:text-6xl lg:text-7xl"
             >
-                Tools to Grow Your
+                Cheaper, Faster, and Better
             </p>
             <p
-                class="text-6xl text-center font-Raleway font-bold pb-2 md:text-7xl"
+                class="text-5xl text-center font-Raleway font-bold pb-2 md:text-7xl"
                 id="freelancing-biz-text"
             >
-                Freelancing Business.
+                Freelance Business Management.
             </p>
             <p class="text-2xl text-center font-medium py-2">
-                <strong>Duelance </strong>has
-                <strong> all the tools you need </strong> to grow your
-                freelancing business <strong>by 100%</strong>
-                - project management, accounting, <br /> invoicing, time
-                tracking,
-                <strong> and more. </strong> The future of managing your business
-                at your doorsteps.
+                Duelance combines all the important aspects of your freelancing
+                business into one intuitive app at a fraction of the cost. Spend
+                more time on your passion, we've got your management covered!
             </p>
         </div>
         <div class="w-full mb-32 mt-2 px-4 md:w-4/5 md:mx-auto lg:w-1/2">
@@ -105,7 +101,7 @@
             <h2
                 class="font-Raleway font-semibold text-5xl pb-2 pt-4 text-center"
             >
-                What We're Building
+                Easier Management, Greater Productivity.
             </h2>
             <p class="font-Raleway font-medium text-2xl mb-2 text-center">
                 👀 at how our product can change your freelancing business
@@ -127,9 +123,9 @@
                         Project Management
                     </h3>
                     <p class="text-white font-Raleway font-medium text-2xl">
-                        Never miss a due date again with simple, yet powerful
-                        tools to manage all your projects. Have a bird's eye
-                        view of what you're working on!
+                        Stop forgetting projects and due dates. Start impressing
+                        clients and get organized with powerful project
+                        management that doesn't overwhelm you.
                     </p>
                 </div>
                 <div
@@ -146,9 +142,9 @@
                         Accounting & Invoicing
                     </h3>
                     <p class="text-white font-Raleway font-medium text-2xl">
-                        Take the stress out of recording payments, expenses,
-                        taxes, and more. Get paid on time with easy to send,
-                        detailed invoices.
+                        Finally, accounting that doesn't require you to be a
+                        CPA. Sending invoices, receiving payments, maintaining
+                        clean books, and filing taxes shouldn't be hectic!
                     </p>
                 </div>
             </div>
@@ -169,8 +165,10 @@
                         Time Tracking
                     </h3>
                     <p class="text-white font-Raleway font-medium text-2xl">
-                        Increase your efficiency by tracking how much time you
-                        spend on tasks. Simple, fast, and accurate.
+                        Duelance's time tracking helps you see <br /> the how, what,
+                        where, why, when of your time spent. With insights, make
+                        informed decisions about spending your time. Work less, earn
+                        more!
                     </p>
                 </div>
                 <div
@@ -181,14 +179,13 @@
                         alt=""
                         class="w-1/4 md:w-16"
                     />
-                    <h3
-                        class="text-white font-Raleway font-semibold text-4xl mb-2"
-                    >
+                    <h3 class="text-white font-Raleway font-semibold text-4xl">
                         Tax Filing
                     </h3>
                     <p class="text-white font-Raleway font-medium text-2xl">
                         A good tax filing a year, keeps the government at pier!
-                        Tax season shouldn't be hectic now!
+                        Tax season should pass like a breeze with Duelance's tax
+                        tracking and filing features!
                     </p>
                 </div>
             </div>
@@ -197,12 +194,13 @@
             class="flex flex-row flex-wrap items-center p-5 mb-20 md:flex-nowrap md:text-left md:items-start md:mt-5 lg:items-center"
         >
             <div class="flex flex-col items-center md:p-5">
-                <h3 class="font-Montserrat font-extrabold text-4xl">
-                    Stay On Top Of Your Clients
+                <h3 class="font-Montserrat font-extrabold text-3xl lg:text-4xl">
+                    Have a Bird's Eye View Of Your Clients
                 </h3>
-                <p class="font-WorkSans font-medium text-2xl mb-4">
-                    Find the most important client-related details in minutes.
-                    No more scrolling through emails.
+                <p class="font-WorkSans font-medium text-xl mb-4 lg:text-2xl">
+                    Stay on top of your clients with an organized view of
+                    important client details, projects, payments, hours worked,
+                    and more!
                 </p>
             </div>
             <div class="">
@@ -222,26 +220,30 @@
             <div
                 class="flex flex-col items-center justify-center md:pl-8 md:justify-center"
             >
-                <h3 class="font-Montserrat font-extrabold text-4xl">
-                    Simple Accounting For Pro Users.
+                <h3 class="font-Montserrat font-extrabold text-3xl lg:text-4xl">
+                    Simple, Yet Complete Accounting for the Average Joe
                 </h3>
-                <p class="font-WorkSans font-medium text-2xl">
-                    Simple, yet powerful features to track your income,
-                    expenses, and taxes. Beautiful graphs to show it all.
+                <p class="font-WorkSans font-medium text-xl lg:text-2xl">
+                    Send beautiful invoices, receive payments, maintain your
+                    books, and track your taxes. We've got every step of the
+                    process covered!
                 </p>
             </div>
         </div>
         <div
-            class="flex flex-row flex-wrap items-center p-5 mb-20 md:flex-nowrap md:text-left md:items-center"
+            class="flex flex-row flex-wrap items-center p-5 mb-20 md:flex-nowrap md:text-left md:items-start lg:items-center"
         >
             <div
-                class="flex flex-col items-center text-center md:pr-5 md:justify-center md:text-left"
+                class="flex flex-col items-center text-center md:justify-center md:text-left lg:w-[100%] md:px-5"
             >
-                <h3 class="font-Montserrat font-extrabold text-4xl">
-                    Project Management To Keep You Sane.
+                <h3 class="font-Montserrat font-extrabold text-3xl lg:text-4xl">
+                    Stop Forgetting Your Projects & Start Hitting Due Dates
                 </h3>
-                <p class="font-WorkSans font-medium text-2xl pb-5">
-                    Lorem ipsum dolor set amit some other stuff
+                <p class="font-WorkSans font-medium text-xl pb-5 lg:text-2xl">
+                    Finish work on time and impress clients with our simple
+                    project management features. Don't get overwhelmed by
+                    thousands of views and features. Focus on what actually
+                    matters!
                 </p>
             </div>
             <div class="">
@@ -263,11 +265,13 @@
                 />
             </div>
             <div class="flex flex-col md:pl-8 md:justify-center">
-                <h3 class="font-Montserrat font-extrabold text-4xl">
-                    Time Tracking For Whosever It May Concern.
+                <h3 class="font-Montserrat font-extrabold text-3xl lg:text-4xl">
+                    Increase Efficiency With Insightful Time Tracking
                 </h3>
-                <p class="font-WorkSans font-medium text-2xl">
-                    Lorem ipsum dolor set amit some other stuff
+                <p class="font-WorkSans font-medium text-2xl lg:text-2xl">
+                    For freelancers time is *literally* money. Track your time
+                    and get AI based recommendations on working smarter, not
+                    harder!
                 </p>
             </div>
         </div>
@@ -282,12 +286,12 @@
                         Join The Waitlist Now
                     </h2>
                     <p
-                        class="font-Worksans font-medium text-3xl text-gray-300 pb-4"
+                        class="font-Worksans font-medium text-3xl text-gray-300 pb-2"
                     >
-                        Be The First To Get To Know About Our Launch
+                        Take One Step Towards Revolutionizing Your Freelance
+                        Business
                     </p>
                     <p class="font-Worksans font-normal text-2xl text-white">
-                        For creatives like you, time is literally money.
                         Duelance centralizes all the operational aspects of your
                         self-employed business to help you save time and hassle.
                         Now, you don't need to switch between ten different apps
