@@ -120,7 +120,10 @@
                                 >Join The Waitlist</button
                             >
                         </div>
-                        <p class="text-center text-black font-WorkSans text-xl">
+                        <br />
+                        <p
+                            class="text-center text-black font-WorkSans text-xl pt-5"
+                        >
                             {message}
                         </p>
                     </form>
@@ -357,6 +360,11 @@
                                 >Join The Waitlist</button
                             >
                         </div>
+                        <p
+                            class="text-center text-white font-WorkSans text-xl pt-5"
+                        >
+                            {message}
+                        </p>
                     </form>
                 </div>
             </div>
