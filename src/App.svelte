@@ -8,6 +8,10 @@
  * Proprietary and confidential
  *******************************************************************************************************************/ -->
 <script lang="ts">
+    import { fly, fade } from "svelte/transition";
+    import { onMount } from "svelte";
+    import { inview } from "svelte-inview";
+
     async function sendWaitlistData() {
         const name_input = document.getElementById("name") as HTMLInputElement;
         const name_arr = name_input.value.split(" ");
@@ -35,6 +39,11 @@
             throw new Error("Please enter valid email address and name.");
         }
     }
+    let animate = false;
+    onMount(() => {
+        animate = true;
+    });
+    let isInView;
 </script>
 
 <main>
@@ -52,52 +61,65 @@
         <div
             class="flex flex-col my-7 space-y-2 items-center justify-end px-4 pt-5 mt-10"
         >
-            <p
-                class="text-5xl text-center font-Raleway font-bold md:text-6xl lg:text-7xl"
-            >
-                Cheaper, Faster, and Better
-            </p>
-            <p
-                class="text-5xl text-center font-Raleway font-bold pb-2 md:text-7xl"
-                id="freelancing-biz-text"
-            >
-                Freelance Business Management.
-            </p>
-            <p class="text-2xl text-center font-medium py-2 lg:w-3/4">
-                Duelance combines all the important aspects of your freelancing
-                business into one intuitive app at a fraction of the cost. Spend
-                more time on your passion, we've got your management covered!
-            </p>
+            {#if animate}
+                <p
+                    class="text-5xl text-center font-Raleway font-bold md:text-6xl lg:text-7xl"
+                    in:fade={{ duration: 1000 }}
+                >
+                    Cheaper, Faster, and Better
+                </p>
+                <p
+                    class="text-5xl text-center font-Raleway font-bold pb-2 md:text-7xl"
+                    id="freelancing-biz-text"
+                    in:fade={{ duration: 2500 }}
+                    style="transition-delay: 1s;"
+                >
+                    Freelance Business Management.
+                </p>
+                <p
+                    class="text-2xl text-center font-medium py-2 lg:w-3/4"
+                    in:fade={{ duration: 5000 }}
+                >
+                    Duelance combines all the important aspects of your
+                    freelancing business into one intuitive app at a fraction of
+                    the cost. Spend more time on your passion, we've got your
+                    management covered!
+                </p>
+                <br />
+                <div
+                    class="w-full mb-32 mt-2 px-4 md:w-4/5 md:mx-auto lg:w-1/2"
+                    in:fly={{ duration: 3000, y: 300 }}
+                >
+                    <form on:submit|preventDefault={sendWaitlistData}>
+                        <div class="mb-6">
+                            <input
+                                type="text"
+                                id="name"
+                                class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="John Doe"
+                            />
+                        </div>
+                        <div class="mb-6">
+                            <input
+                                type="email"
+                                id="email"
+                                class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="johnd@example.com"
+                            />
+                        </div>
+                        <div class="text-center">
+                            <button
+                                type="submit"
+                                id="submit-button-form-top"
+                                class="px-5 py-2.5 text-white rounded-full text-2xl font-Raleway font-semibold focus:outline-white hover:shadow-lg"
+                                >Join The Waitlist</button
+                            >
+                        </div>
+                    </form>
+                </div>
+            {/if}
         </div>
-        <div class="w-full mb-32 mt-2 px-4 md:w-4/5 md:mx-auto lg:w-1/2">
-            <form on:submit|preventDefault={sendWaitlistData}>
-                <div class="mb-6">
-                    <input
-                        type="text"
-                        id="name"
-                        class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="John Doe"
-                    />
-                </div>
-                <div class="mb-6">
-                    <input
-                        type="email"
-                        id="email"
-                        class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="johnd@example.com"
-                    />
-                </div>
-                <div class="text-center">
-                    <button
-                        type="submit"
-                        id="submit-button-form-top"
-                        class="px-5 py-2.5 text-white rounded-full text-2xl font-Raleway font-semibold focus:outline-white hover:shadow-lg"
-                        >Join The Waitlist</button
-                    >
-                </div>
-            </form>
-        </div>
-        <div class="bg-gray-200 flex flex-col p-5 w-full items-center">
+        <div class="bg-gray-200 flex flex-col p-5 w-full items-center mt-32">
             <h2
                 class="font-Raleway font-semibold text-5xl pb-2 pt-4 text-center"
             >
@@ -108,45 +130,53 @@
             </p>
             <div
                 class="flex flex-row flex-wrap px-5 py-2 justify-evenly mt-5 lg:flex-nowrap"
+                use:inview={{ unobserveOnEnter: true, rootMargin: "-20%" }}
+                on:change={({ detail }) => {
+                    isInView = detail.inView;
+                }}
             >
-                <div
-                    class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
-                >
-                    <img
-                        src="images/proj-manage-icon.png"
-                        alt=""
-                        class="w-1/4 md:w-16"
-                    />
-                    <h3
-                        class="text-white font-Raleway font-semibold text-4xl mb-2"
+                {#if isInView}
+                    <div
+                        class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
+                        in:fly={{ x: -2000, duration: 1000 }}
                     >
-                        Project Management
-                    </h3>
-                    <p class="text-white font-Raleway font-medium text-2xl">
-                        Stop forgetting projects and due dates. Start impressing
-                        clients and get organized with powerful project
-                        management that doesn't overwhelm you.
-                    </p>
-                </div>
-                <div
-                    class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
-                >
-                    <img
-                        src="images/accounting-icon.png"
-                        alt=""
-                        class="w-1/4 md:w-16"
-                    />
-                    <h3
-                        class="text-white font-Raleway font-semibold text-4xl mb-2"
+                        <img
+                            src="images/proj-manage-icon.png"
+                            alt=""
+                            class="w-1/4 md:w-16"
+                        />
+                        <h3
+                            class="text-white font-Raleway font-semibold text-4xl mb-2"
+                        >
+                            Project Management
+                        </h3>
+                        <p class="text-white font-Raleway font-medium text-2xl">
+                            Stop forgetting projects and due dates. Start
+                            impressing clients and get organized with powerful
+                            project management that doesn't overwhelm you.
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
                     >
-                        Accounting & Invoicing
-                    </h3>
-                    <p class="text-white font-Raleway font-medium text-2xl">
-                        Finally, accounting that doesn't require you to be a
-                        CPA. Sending invoices, receiving payments, maintaining
-                        clean books, and filing taxes shouldn't be hectic!
-                    </p>
-                </div>
+                        <img
+                            src="images/accounting-icon.png"
+                            alt=""
+                            class="w-1/4 md:w-16"
+                        />
+                        <h3
+                            class="text-white font-Raleway font-semibold text-4xl mb-2"
+                        >
+                            Accounting & Invoicing
+                        </h3>
+                        <p class="text-white font-Raleway font-medium text-2xl">
+                            Finally, accounting that doesn't require you to be a
+                            CPA. Sending invoices, receiving payments,
+                            maintaining clean books, and filing taxes shouldn't
+                            be hectic!
+                        </p>
+                    </div>
+                {/if}
             </div>
             <div
                 class="flex flex-row flex-wrap px-5 py-2 justify-evenly mb-5 lg:flex-nowrap"
