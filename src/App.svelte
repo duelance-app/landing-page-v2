@@ -71,7 +71,7 @@
                     class="text-5xl text-center font-Raleway font-bold md:text-6xl lg:text-7xl"
                     in:fade={{ duration: 1000 }}
                 >
-                    Cheaper, Faster, and Better
+                    Faster, Cheaper, and Better
                 </p>
                 <p
                     class="text-5xl text-center font-Raleway font-bold pb-2 md:text-7xl"
