@@ -143,7 +143,7 @@
                 class="flex flex-row flex-wrap px-5 py-2 justify-evenly mt-5 lg:flex-nowrap"
             >
                 <div
-                    class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
+                    class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly lg:w-1/2"
                     in:fly={{ x: -2000, duration: 1000 }}
                 >
                     <img
@@ -163,7 +163,7 @@
                     </p>
                 </div>
                 <div
-                    class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly"
+                    class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly lg:w-1/2"
                 >
                     <img
                         src="images/accounting-icon.png"
@@ -186,7 +186,7 @@
                 class="flex flex-row flex-wrap px-5 py-2 justify-evenly mb-5 lg:flex-nowrap"
             >
                 <div
-                    class="flex flex-col bg-gray-900 p-7 mx-2 rounded-3xl mb-4 lg:justify-evenly lg:mb-0"
+                    class="flex flex-col bg-gray-900 p-7 mx-2 rounded-3xl mb-4 lg:justify-evenly lg:mb-0 lg:w-1/2"
                 >
                     <img
                         src="images/time-icon.png"
@@ -206,7 +206,7 @@
                     </p>
                 </div>
                 <div
-                    class="flex flex-col bg-gray-900 p-7 mx-2 rounded-3xl lg:justify-evenly"
+                    class="flex flex-col bg-gray-900 p-7 mx-2 rounded-3xl lg:justify-evenly lg:w-1/2"
                 >
                     <img
                         src="images/tax-icon.png"
