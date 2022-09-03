@@ -91,6 +91,13 @@
                     management covered!
                 </p>
                 <br />
+                <p
+                    class="font-Worksans text-xl font-medium"
+                    in:fade={{ duration: 5000 }}
+                >
+                    <strong>First 100 users</strong> to sign up to the waitlist
+                    get <strong>2 months FREE! 23 spots remaining.</strong>
+                </p>
                 <div
                     class="w-full mb-32 mt-2 px-4 md:w-4/5 md:mx-auto lg:w-1/2"
                     in:fly={{ duration: 3000, y: 300 }}
