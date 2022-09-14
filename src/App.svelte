@@ -53,23 +53,18 @@
 
 <main>
     <div class="flex flex-col">
-        <div class="flex flex-row items-center justify-between p-2">
-            <p class="text-3xl font-extrabold text-center font-Raleway">
+        <div class="flex flex-row items-center justify-center p-6 pt-8">
+            <p
+                class="text-[2.5rem] h-[0.75] font-extrabold text-center font-Raleway"
+            >
                 Duelance
             </p>
-            <div
-                class="px-4 py-4 bg-gray-100 bg-opacity-50 border-2 rounded-full border-white"
-            >
-                <p class="text-xl font-bold text-center">Join the Waitlist!</p>
-            </div>
         </div>
-        <div
-            class="flex flex-col my-7 space-y-2 items-center justify-end px-4 pt-5 mt-10"
-        >
+        <div class="flex flex-col space-y-2 items-center justify-end px-4">
             {#if animate}
                 <p
                     class="text-5xl text-center font-Raleway font-bold md:text-6xl lg:text-7xl"
-                    in:fade={{ duration: 1000 }}
+                    in:fade={{ duration: 1500 }}
                 >
                     Faster, Cheaper, Better
                 </p>
@@ -82,8 +77,8 @@
                     Freelance Business Management.
                 </p>
                 <p
-                    class="text-2xl text-center font-medium py-2 lg:w-3/4"
-                    in:fade={{ duration: 5000 }}
+                    class="text-3xl text-center font-WorkSans py-2 lg:w-3/4"
+                    in:fade={{ duration: 3500 }}
                 >
                     Duelance combines all the important aspects of your
                     freelancing business into one intuitive app at a fraction of
@@ -91,48 +86,45 @@
                     management covered!
                 </p>
                 <br />
-                <p
-                    class="font-Worksans text-xl font-medium"
-                    in:fade={{ duration: 5000 }}
-                >
-                    <strong>First 100 users</strong> to sign up to the waitlist
-                    get <strong>2 months FREE! 23 spots remaining.</strong>
-                </p>
                 <div
-                    class="w-full mb-32 mt-2 px-4 md:w-4/5 md:mx-auto lg:w-1/2"
-                    in:fly={{ duration: 3000, y: 300 }}
+                    class="w-full mb-32 mt-2 px-4 pt-2 md:w-4/5 md:mx-auto lg:w-1/2"
+                    in:fly={{ duration: 3500, y: 200 }}
                 >
                     <form on:submit|preventDefault={sendWaitlistData}>
                         <div class="mb-6">
                             <input
                                 type="text"
                                 id="name"
-                                class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="John Doe"
+                                class="placeholder-grey font-WorkSans focus:placeholder-white bg-white border-2 border-black text-gray-900 text-xl text-center rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Name"
                             />
                         </div>
                         <div class="mb-6">
                             <input
                                 type="email"
                                 id="email"
-                                class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="johnd@example.com"
+                                class="placeholder-grey font-WorkSans focus:placeholder-white bg-white border-2 border-black text-gray-900 text-xl text-center rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Email"
                             />
                         </div>
-                        <div class="text-center">
-                            <button
-                                type="submit"
-                                id="submit-button-form-top"
-                                class="px-5 py-2.5 text-white rounded-full text-2xl font-Raleway font-semibold focus:outline-white hover:shadow-lg"
-                                >Join The Waitlist</button
-                            >
-                        </div>
-                        <br />
-                        <p
-                            class="text-center text-black font-WorkSans text-xl pt-5"
+                        <div
+                            class="flex space-y-9 w-full md:w-4/5 md:mx-auto lg:w-full justify-center"
                         >
-                            {message}
-                        </p>
+                            <div class="px-4 py-4 bg-gray-300 rounded-full">
+                                <button
+                                    class="text-2xl font-bold text-center text-black"
+                                    type="submit"
+                                    id="submit-button-form"
+                                    >Join the Waitlist!</button
+                                >
+                            </div>
+                            <br />
+                            <p
+                                class="text-center text-black font-WorkSans text-xl pt-5"
+                            >
+                                {message}
+                            </p>
+                        </div>
                     </form>
                 </div>
             {/if}
@@ -320,63 +312,35 @@
                 </p>
             </div>
         </div>
-        <div class="flex flex-col p-10" id="footer">
-            <div class="flex flex-row flex-wrap lg:flex-nowrap lg:mr-2">
+        <div class="flex flex-col p-10 pb-6" id="footer">
+            <div
+                class="flex flex-row flex-wrap lg:flex-nowrap items-center justify-center"
+            >
                 <div
                     class="flex flex-col md:items-center md:text-center lg:text-left lg:items-start"
                 >
-                    <h2
-                        class="font-WorkSans font-medium text-5xl text-white pb-2"
-                    >
-                        Join The Waitlist Now
-                    </h2>
                     <p
-                        class="font-Worksans font-medium text-3xl text-gray-300 pb-2"
+                        class="font-Worksans font-medium text-5xl text-gray-300 pb-2"
                     >
                         Take One Step Towards Revolutionizing Your Freelance
                         Business
                     </p>
-                    <p class="font-Worksans font-normal text-2xl text-white">
+                    <!-- <p class="font-Worksans font-normal text-3xl text-white">
                         Duelance centralizes all the operational aspects of your
                         self-employed business to help you save time and hassle.
-                        Now, you don't need to switch between ten different apps
-                        for ten different tasks. Everything in one place.
-                    </p>
+                    </p> -->
                 </div>
                 <div
-                    class="space-y-9 mt-10 w-full md:w-4/5 md:mx-auto lg:w-full"
+                    class="flex space-y-9 w-full md:w-4/5 md:mx-auto lg:w-full justify-center"
                 >
-                    <form on:submit|preventDefault={sendWaitlistData}>
-                        <div class="mb-6">
-                            <input
-                                type="text"
-                                id="name"
-                                class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="John Doe"
-                            />
-                        </div>
-                        <div class="mb-6">
-                            <input
-                                type="email"
-                                id="email"
-                                class="bg-white border-2 border-black text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="johnd@example.com"
-                            />
-                        </div>
-                        <div class="text-center">
-                            <button
-                                id="submit-button"
-                                type="submit"
-                                class="text-white bg-black hover:bg-grey-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-full text-2xl w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                >Join The Waitlist</button
-                            >
-                        </div>
-                        <p
-                            class="text-center text-white font-WorkSans text-xl pt-5"
+                    <div class="px-4 py-4 bg-white rounded-full">
+                        <button
+                            class="text-3xl font-bold text-center text-black"
+                            on:click={() =>
+                                window.scrollTo({ top: 0, behavior: "smooth" })}
+                            >Join the Waitlist!</button
                         >
-                            {message}
-                        </p>
-                    </form>
+                    </div>
                 </div>
             </div>
             <hr class="w-full p-5 mt-8 border-gray-400" />
@@ -422,15 +386,8 @@
     #footer {
         background-color: #252d48;
     }
-    #submit-button {
-        background-color: #dadada;
-        color: #423d3d;
-    }
     a {
         text-decoration: none;
         color: rgb(209 213 219);
-    }
-    #submit-button-form-top {
-        background-color: black;
     }
 </style>
