@@ -71,7 +71,7 @@
                     class="text-5xl text-center font-Raleway font-bold md:text-6xl lg:text-7xl"
                     in:fade={{ duration: 1000 }}
                 >
-                    Faster, Cheaper, and Better
+                    Faster, Cheaper, Better
                 </p>
                 <p
                     class="text-5xl text-center font-Raleway font-bold pb-2 md:text-7xl"
@@ -154,7 +154,7 @@
                     in:fly={{ x: -2000, duration: 1000 }}
                 >
                     <img
-                        src="images/proj-manage-icon.png"
+                        src="images/proj-manage-icon.webp"
                         alt=""
                         class="w-1/4 md:w-16"
                     />
@@ -173,7 +173,7 @@
                     class="flex flex-col bg-gray-900 p-7 mx-2 mb-4 rounded-3xl lg:justify-evenly lg:w-1/2"
                 >
                     <img
-                        src="images/accounting-icon.png"
+                        src="images/accounting-icon.webp"
                         alt=""
                         class="w-1/4 md:w-16"
                     />
@@ -196,7 +196,7 @@
                     class="flex flex-col bg-gray-900 p-7 mx-2 rounded-3xl mb-4 lg:justify-evenly lg:mb-0 lg:w-1/2"
                 >
                     <img
-                        src="images/time-icon.png"
+                        src="images/time-icon.webp"
                         alt=""
                         class="w-1/4 md:w-16"
                     />
@@ -216,7 +216,7 @@
                     class="flex flex-col bg-gray-900 p-7 mx-2 rounded-3xl lg:justify-evenly lg:w-1/2"
                 >
                     <img
-                        src="images/tax-icon.png"
+                        src="images/tax-icon.webp"
                         alt=""
                         class="w-1/4 md:w-16"
                     />
@@ -246,7 +246,7 @@
             </div>
             <div class="">
                 <img
-                    src="images/client-management-ui.png"
+                    src="images/client-management-ui.webp"
                     alt=""
                     class="shadow-2xl"
                 />
@@ -256,7 +256,11 @@
             class="flex flex-row flex-wrap items-center p-5 mb-20 text-center md:flex-nowrap md:text-left md:items-center"
         >
             <div class="pb-5">
-                <img src="images/accounting-ui.png" alt="" class="shadow-2xl" />
+                <img
+                    src="images/accounting-ui.webp"
+                    alt=""
+                    class="shadow-2xl"
+                />
             </div>
             <div
                 class="flex flex-col items-center justify-center md:pl-8 md:justify-center"
@@ -289,7 +293,7 @@
             </div>
             <div class="">
                 <img
-                    src="images/project-management-ui.png"
+                    src="images/project-management-ui.webp"
                     alt=""
                     class="shadow-2xl"
                 />
@@ -300,7 +304,7 @@
         >
             <div class="pb-5">
                 <img
-                    src="images/time-tracking-ui.png"
+                    src="images/time-tracking-ui.webp"
                     alt=""
                     class="shadow-2xl"
                 />
@@ -382,8 +386,14 @@
                 <p
                     class="font-WorkSans font-semibold text-2xl text-gray-300 pb-3 md:text-xl"
                 >
-                    &copy; 2022 Naman Bansal & <br />
-                    Shreyans Jain
+                    &copy; 2022 <a href="https://www.linkedin.com/in/namban/"
+                        >Naman Bansal</a
+                    >
+                    & <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.linkedin.com/in/sjain07/"
+                        >Shreyans Jain</a
+                    >
                 </p>
                 <p
                     class="font-WorkSans font-semibold text-5xl text-white text-center vertical-middle pb-3"
